@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="jquery.min.js"></script>
+	<script src="imgLoad.js"></script>
+	<style>
+		ul{list-style: none;}
+		li{ width: 500px; height: 500px; border:1px solid #ccc;}
+		img{  height: 500px;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><img load-src="http://img10.3lian.com/sc6/show02/67/27/02.jpg" alt="" /></li>
+		<li><img load-src="http://img161.poco.cn/mypoco/myphoto/20100424/19/53310080201004241856521800459127582_005.jpg" alt="" /></li>
+		<li style=""></li>
+		<li><img load-src="http://img4.duitang.com/uploads/item/201408/30/20140830185433_FnJLA.jpeg" alt="" /></li>
+		<li><img load-src="http://s4.sinaimg.cn/middle/5db29a99h70e7bb8abe33&690" alt="" /></li>
+		<li><img load-src="http://tupian.enterdesk.com/2013/xll/012/26/3/1.jpg" alt="" /></li>
+		<li><img load-src="http://att2.citysbs.com/yuhang/2013/02/06/11/111706_16441360120626212_f46f601e47e1aa9042bf1bd16b66e1dd.jpg" alt="" /></li>
+		<li><img load-src="http://photo.l99.com/bigger/32/1371289116463_bv5ct5.jpg" alt="" /></li>
+	</ul>
+	<script>
+		$(function(){
+			/*var imgList=$('img[data-src]');
+			//alert(imgList.length)
+			var arrs=[];
+			imgList.each(function(i){
+				arrs.push({obj:imgList.eq(i),top:$(this).offset().top})
+			});
+
+			$(window).scroll(function(){
+
+				_top=$(window).scrollTop()+$(window).height();
+				//$('body').title=$(window).scroll().top();
+				for(var i=arrs.length-1;i>=0;i--){
+					var z=$(arrs[i]['obj']);
+					if(_top>arrs[i]['top'] &  z.attr('data-src') != z.attr('src') ){
+						var a = new Image();
+						var z_obj=$(arrs[i]['obj']);
+						a.src=z_obj.attr('data-src');
+
+						a.onload=function(){
+							console.log(z_obj);
+							console.log(z_obj.attr('data-src'));
+							z_obj.attr('src',z_obj.attr('data-src'))
+						}
+						console.log(_top);
+
+						//arrs.splice(i,1)
+						
+					}
+				}
+			})*/
+			var fImg = new fImgLoad({
+				obj:$("ul").eq(0),
+				dataSrc:'load-src',
+				bDefaultImg:'true'
+			}); 
+		})
+
+		
+	</script>
+</body>
+</html>
