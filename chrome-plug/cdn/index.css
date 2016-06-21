@@ -1,0 +1,3 @@
+#haizi_name{
+	 position: fixed; bottom: 10px;  left: 10px;  background: #000;font-size: 14px; z-index: 99999; font-family: "microsoft yahei"; opacity: 0.5; color:#fff;  padding: 0 10px; border-radius: 5px; line-height: 30px;
+}

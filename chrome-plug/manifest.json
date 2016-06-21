@@ -1,0 +1,36 @@
+{
+	"name": "海子",
+	"version": "1.0",
+	"description": "第一个chrome插件",
+	"browser_action": {
+		"default_icon": "i.png",
+		"default_popup":"index.html"
+	},
+	"content_scripts":[
+		//显示当前页面host
+		{
+			"matches":["*://*/*"],
+			"css":["cdn/index.css"],
+			"js":["cdn/jquery.min.js","cdn/index.js"]
+		},
+		//去广告
+		{
+			"matches":["*://play.baidu.com/*"],
+			"css":["ads/index.css"],
+			"js":["jquery.min.js","ads/index.js"]
+		}
+	],
+	"permissions": [
+		"bookmarks",
+		"background",
+		"contextMenus",
+		"cookies",
+		"history",
+		"tabs",
+		"unlimitedStorage",
+		"management",
+		"*://*/*"
+
+	],
+	"manifest_version":2
+}
